@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ナビオちゃん</title>
+</head>
+<body>
+	<h1>ターゲット1900 テスト</h1>
+	
+	<!-- テスト用紙 -->
+	<!-- 問題 -->
+	<tr th:each="wordData : ${wordDataList}">
+	    <td th:text="${wordData.questionNumber}"></td>
+	    <td th:text="${wordData.word}"></td>
+	    <td th:text="_____________"></td>
+	</tr>
+	
+	<!-- 解答 -->
+	<tr th:each="wordData : ${wordDataList}">
+	    <td th:text="${wordData.questionNumber}"></td>
+	    <td th:text="${wordData.word}"></td>
+	    <td th:text="${customer.meaning}"></td>
+	</tr>
+	
+</body>
+</html>
