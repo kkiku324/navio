@@ -29,8 +29,8 @@ public class TestViewLogic {
 			selectedNumber = random.nextInt(endPosition - startPosition + 1) + startPosition;
 			
 			// 出題済みの英単語ならやり直し
-			if (usedNumbers.contains(selectedNumber)) {
-				continue;
+			while (usedNumbers.contains(selectedNumber)) {
+				selectedNumber = random.nextInt(endPosition - startPosition + 1) + startPosition;
 			}
 			
 			// 英単語とその意味を登録する
