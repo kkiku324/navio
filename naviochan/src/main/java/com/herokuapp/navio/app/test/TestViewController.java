@@ -30,8 +30,9 @@ public class TestViewController {
 		}
 		
 		// 出題する問題のデータを取得する
+		//List<WordData> wordDataList = TestViewLogic.selectWords(testViewForm.getEndPosition(), testViewForm.getEndPosition());
 		List<WordData> wordDataList = TestViewLogic.selectWords(testViewForm.getEndPosition(), testViewForm.getEndPosition());
-		
+
 		model.addAttribute("wordDataList", wordDataList);
 		
 		return "test/paper";

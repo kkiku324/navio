@@ -8,11 +8,11 @@ import javax.validation.constraints.Min;
  */
 public class TestViewForm {
 	@Min(1)
-	@Max(999)
+	@Max(1900)
 	private int startPosition;  // 開始位置の番号
 	
 	@Min(1)
-	@Max(999)
+	@Max(1900)
 	private int endPosition;  // 終了位置の番号
 	
 	public TestViewForm() { }
