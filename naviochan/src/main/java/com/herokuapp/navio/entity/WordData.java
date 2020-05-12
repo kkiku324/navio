@@ -2,22 +2,22 @@ package com.herokuapp.navio.entity;
 
 
 /**
- * –â‘è”Ô†A‰p’PŒê‚Æ‚»‚ÌˆÓ–¡‚ğ•Û‚·‚éƒGƒ“ƒeƒBƒeƒBƒNƒ‰ƒX
+ * 1å•åˆ†ã®å•é¡Œãƒ‡ãƒ¼ã‚¿ã‚’ä¿æŒã™ã‚‹ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã‚¯ãƒ©ã‚¹
  */
 public class WordData {
 	
 	/**
-	 * –â‘è”Ô†
+	 * å•é¡Œç•ªå·
 	 */
 	private int questionNumber;
 	
 	/**
-	 * ‰p’PŒê
+	 * è‹±å˜èª
 	 */
 	private String word;
 	
 	/**
-	 * ‰p’PŒê‚ÌˆÓ–¡i“ú–{Œê–ój
+	 * æ„å‘³
 	 */
 	private String meaning;
 	

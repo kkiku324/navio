@@ -23,14 +23,13 @@ public class TestController {
 	
 	@PostMapping("/generate")
 	public String generate(@Validated TestForm testForm, BindingResult result, Model model) {
-		// “ü—Í‚ª•s³‚Ü‚½‚ÍAƒeƒXƒg”ÍˆÍ‚ª50–¢–‚Ìê‡‚Í–ß‚é
 		if (result.hasErrors() || testForm.getEndPosition() - testForm.getStartPosition() < 50) {
-			model.addAttribute("errorMessage", "’ˆÓF1`1900‚Ì”ÍˆÍ‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+			model.addAttribute("errorMessage", "1ï½1900ã®ç¯„å›²ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 			
 			return "test/top";
 		}
 		
-		// o‘è‚·‚éƒf[ƒ^‚ğæ“¾‚·‚é
+		// å‡ºé¡Œã™ã‚‹å•é¡Œã®ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—ã™ã‚‹
 		List<WordData> wordDataList = TestLogic.selectWords(testForm.getEndPosition(), testForm.getEndPosition());
 		
 		model.addAttribute("wordDataList", wordDataList);

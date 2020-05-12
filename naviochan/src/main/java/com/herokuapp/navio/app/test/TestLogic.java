@@ -8,45 +8,45 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * ƒeƒXƒg‚ÉŠÖ‚·‚éˆ—‚ğs‚¤ƒ‚ƒfƒ‹ƒNƒ‰ƒX
+ * ãƒ†ã‚¹ãƒˆã«é–¢ã™ã‚‹å‡¦ç†ã‚’è¡Œã†ãƒ¢ãƒ‡ãƒ«ã‚¯ãƒ©ã‚¹
  */
 public class TestLogic {
 	public static List<WordData> selectWords(int startPosition, int endPosition) {
-		List<WordData> wordDataList = new ArrayList<>();  // ƒeƒXƒg‚·‚é‰p’PŒê‚ÌƒŠƒXƒg
-		List<Integer> usedNumbers = new ArrayList<>();  // o‘èÏ‚İ‚Ì‰p’PŒê‚Ì”Ô†
-		int selectedNumber = 0;  // ƒ‰ƒ“ƒ_ƒ€‚Å‘I‚Î‚ê‚½–â‘è”Ô†
-		Random random = new Random();  // ‰p’PŒê‚ğƒ‰ƒ“ƒ_ƒ€‚Å‘I‚Ô‚½‚ß‚Ì—”¶¬ƒCƒ“ƒXƒ^ƒ“ƒX
+		List<WordData> wordDataList = new ArrayList<>();  // å•é¡Œã®ãƒ‡ãƒ¼ã‚¿
+		List<Integer> usedNumbers = new ArrayList<>();  // å‡ºé¡Œæ¸ˆã¿ã®è‹±å˜èªã®ç•ªå·
+		int selectedNumber = 0;  // ãƒ©ãƒ³ãƒ€ãƒ ã§é¸ã°ã‚ŒãŸè‹±å˜èªã®ç•ªå·
+		Random random = new Random();  // ä¹±æ•°ç”Ÿæˆç”¨
 		
-		// 50ŒÂ‚Ì’PŒê‚ğ‘I‚Ño‚·
+		// 50å›ç¹°ã‚Šè¿”ã™
 		for (int i = 0; i < 50; i++) {
-			// 1–â•ª‚Ì‚Ì‰p’PŒê‚Ìƒf[ƒ^
+			// 1å•åˆ†ã®ãƒ‡ãƒ¼ã‚¿
 			WordData wordData = new WordData();
 			
-			// –â‘è”Ô†‚ğ“o˜^‚·‚é
+			// å•é¡Œç•ªå·ã‚’ç™»éŒ²ã™ã‚‹
 			wordData.setQuestionNumber(i + 1);
 			
 			while (true) {
-				// o‘è‚·‚é‰p’PŒê‚Ì”Ô†‚ğ‘I‚Ô
+				// å‡ºé¡Œã™ã‚‹è‹±å˜èªã®å ´å·ã‚’é¸ã¶
 				selectedNumber = random.nextInt(endPosition - startPosition + 1) + startPosition;
 				
-				// o‘èÏ‚İ‚Ì‰p’PŒê‚Ì”Ô†‚È‚çŒˆ‚ß‚È‚¨‚µ
+				// å‡ºé¡Œæ¸ˆã¿ã®è‹±å˜èªãªã‚‰ã‚„ã‚Šç›´ã—
 				if (usedNumbers.contains(selectedNumber)) {
 					continue;
 				}
 				else {
-					// Ÿ‚Öi‚Ş
+					// æ¬¡ã¸é€²ã‚€
 					break;
 				}
 			}
 			
-			// ‘I‚ñ‚¾”Ô†‚Ì’PŒê‚ÆˆÓ–¡‚ğæ“¾‚·‚é
+			// è‹±å˜èªã¨ãã®æ„å‘³ã‚’ç™»éŒ²ã™ã‚‹
 			wordData.setWord(WordsAndMeanings.words[selectedNumber]);
 			wordData.setMeaning(WordsAndMeanings.meanings[selectedNumber]);
 			
-			// ƒŠƒXƒg‚É’Ç‰Á‚·‚é
+			// é…åˆ—ã«è¿½åŠ ã™ã‚‹
 			wordDataList.add(wordData);
 			
-			// ”Ô†‚ğo‘èÏ‚İ‚É‚·‚é
+			// å‡ºé¡Œæ¸ˆã¿ã®ç•ªå·ã«ã™ã‚‹
 			usedNumbers.add(selectedNumber);
 		}  // end of for statement
 		
