@@ -25,18 +25,12 @@ public class TestViewLogic {
 			// 問題番号を登録する
 			wordData.setQuestionNumber(i + 1);
 			
-			while (true) {
-				// 出題する英単語の場号を選ぶ
-				selectedNumber = random.nextInt(endPosition - startPosition + 1) + startPosition;
-				
-				// 出題済みの英単語ならやり直し
-				if (usedNumbers.contains(selectedNumber)) {
-					continue;
-				}
-				else {
-					// 次へ進む
-					break;
-				}
+			// 出題する英単語の場号を選ぶ
+			selectedNumber = random.nextInt(endPosition - startPosition + 1) + startPosition;
+			
+			// 出題済みの英単語ならやり直し
+			if (usedNumbers.contains(selectedNumber)) {
+				continue;
 			}
 			
 			// 英単語とその意味を登録する
