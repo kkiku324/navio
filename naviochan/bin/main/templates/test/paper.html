@@ -9,18 +9,24 @@
 	
 	<!-- テスト用紙 -->
 	<!-- 問題 -->
-	<tr th:each="wordData : ${wordDataList}">
-	    <td th:text="${wordData.questionNumber}"></td>
-	    <td th:text="${wordData.word}"></td>
-	    <td th:text="_____________"></td>
-	</tr>
+	<table>
+		<tr th:each="wordData : ${wordDataList}">
+		    <td th:text="${wordData.questionNumber}"></td>
+		    <td th:text="${wordData.word}"></td>
+		    <td th:text="_____________"></td>
+		</tr>
+	</table>
+	
 	
 	<!-- 解答 -->
-	<tr th:each="wordData : ${wordDataList}">
-	    <td th:text="${wordData.questionNumber}"></td>
-	    <td th:text="${wordData.word}"></td>
-	    <td th:text="${customer.meaning}"></td>
-	</tr>
+	<table>
+		<tr th:each="wordData : ${wordDataList}">
+		    <td th:text="${wordData.questionNumber}"></td>
+		    <td th:text="${wordData.word}"></td>
+		    <td th:text="${customer.meaning}"></td>
+		</tr>
+	</table>
+	
 	
 </body>
 </html>
