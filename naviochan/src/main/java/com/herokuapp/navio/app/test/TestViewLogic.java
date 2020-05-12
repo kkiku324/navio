@@ -1,6 +1,7 @@
 package com.herokuapp.navio.app.test;
 
 import com.herokuapp.navio.entity.WordData;
+
 import com.herokuapp.navio.resource.WordsAndMeanings;
 
 import java.util.ArrayList;
