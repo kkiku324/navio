@@ -23,7 +23,7 @@
 		<tr th:each="wordData : ${wordDataList}">
 		    <td th:text="${wordData.questionNumber}"></td>
 		    <td th:text="${wordData.word}"></td>
-		    <td th:text="${customer.meaning}"></td>
+		    <td th:text="${wordData.meaning}"></td>
 		</tr>
 	</table>
 	
