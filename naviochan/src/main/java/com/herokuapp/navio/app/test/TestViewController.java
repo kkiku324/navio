@@ -36,4 +36,11 @@ public class TestViewController {
 //		
 //		return "test/paper";
 //	}
+	
+	@PostMapping("/generate")
+	public String generate() {
+		
+		
+		return "test/paper";
+	}
 }
