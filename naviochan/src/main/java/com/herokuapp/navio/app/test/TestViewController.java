@@ -28,7 +28,7 @@ public class TestViewController {
 	
 //	@PostMapping("/generate")
 //	public String generate(@Validated TestViewForm testViewForm, BindingResult result, Model model) {
-//		if (result.hasErrors() || testViewForm.getEndPosition() - testViewForm.getStartPosition() < 50) {
+//		if (result.hasErrors() || testViewForm.getEndPosition() - testViewForm.getStartPosition() + 1 < 50) {
 //			model.addAttribute("errorMessage", "1～1900の範囲で入力してください。");
 //			
 //			return "test/top";
