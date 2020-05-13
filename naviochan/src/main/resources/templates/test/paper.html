@@ -9,6 +9,7 @@
 	
 	<!-- テスト用紙 -->
 	<!-- 問題 -->
+	<h3>問題</h3>
 	<table>
 		<tr th:each="wordData : ${wordDataList}">
 		    <td th:text="${wordData.questionNumber}"></td>
@@ -17,8 +18,10 @@
 		</tr>
 	</table>
 	
+	<br><br><br><br><br><br><br><br><br><br>
 	
 	<!-- 解答 -->
+	<h3>解答</h3>
 	<table>
 		<tr th:each="wordData : ${wordDataList}">
 		    <td th:text="${wordData.questionNumber}"></td>
