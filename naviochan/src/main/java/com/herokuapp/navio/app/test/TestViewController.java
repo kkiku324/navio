@@ -87,6 +87,8 @@ public class TestViewController {
 			usedNumbers.add(selectedNumber);
 		}  // end of for statement
 		
+		model.addAttribute("wordDataList", wordDataList);
+		
 		
 		return "test/paper";
 	}
